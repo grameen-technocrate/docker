@@ -15,14 +15,6 @@ If you’re installing Docker on a system without internet access, you can downl
 Remove conflicting packages (e.g., podman and runc):
 #sudo dnf -y remove podman runc
 
-Download the Docker repository configuration:
-#sudo curl -o /etc/yum.repos.d/docker-ce.repo https://download.docker.com/linux/centos/docker-ce.repo
-
-Disable the repository (since you’re installing manually):
-#sudo sed -i -e "s/enabled=1/enabled=0/g" /etc/yum.repos.d/docker-ce.repo
-
-Install Docker Engine:
-#sudo dnf --enablerepo=docker-ce-stable -y install docker-ce
 
 Verify the Installation:
 Check that Docker is installed correctly by running the hello-world image:
